@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+
+  <!-- Polices
+Logo et titres : Shrikhand
+Txte : Roboto -->
+
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="./images/logo/ohmyfood@2x.svg" />
+      </div>
+      <div class="header__localisation">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Paris, Belleville</p>
+      </div>
+    </header>
+    <main>
+      <div class="explore">
+        <div class="explore__title">
+          <h1>Reservez le menu qui vous convient</h1>
+        </div>
+        <div class="explore__detail">
+          <p>
+            Découvrez des restaurants d'exception, séléctionnés par nos soins
+          </p>
+        </div>
+        <div class="explore__button-div">
+          <button class="explore__button">
+            <a href="#restaurants">Explorez nos restaurants</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="steps">
+        <div class="steps__title">
+          <h1>Fonctionnement</h1>
+        </div>
+        <div class="steps__choose">
+          <i class="fa-solid fa-1"></i>
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <p>Choisissez un restaurant</p>
+        </div>
+        <div class="steps__compose">
+          <i class="fa-solid fa-2"></i>
+          <i class="fa-solid fa-list-ul"></i>
+          <p>Composez votre menu</p>
+        </div>
+        <div class="steps__deguste">
+          <i class="fa-solid fa-3"></i>
+          <i class="fa-solid fa-store"></i>
+          <p>Dégustez au restaurant</p>
+        </div>
+      </div>
+
+      <div class="restaurants">
+        <h1 class="restaurant__title">Restaurants</h1>
+        <div class="restaurant__list">
+          <article class="cards">
+            <a href="./pages/menu1.html" class="cards__link">
+              <img
+                src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              />
+              <div class="cards__content">
+                <div class="cards__content-txt">
+                  <h2 class="cards__content-title">La palette du goût</h2>
+                  <p class="cards__content-subtitle">Ménilmontant</p>
+                </div>
+                <div class="cards__content-rating">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="cards">
+            <a href="./pages/menu2.html" class="cards__link">
+              <img
+                src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              />
+              <div class="cards__content">
+                <div class="cards__content-txt">
+                  <h2 class="cards__content-title">La palette du goût</h2>
+                  <p class="cards__content-subtitle">Ménilmontant</p>
+                </div>
+                <div class="cards__content-rating">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="cards">
+            <a href="./pages/menu3.html" class="cards__link">
+              <img
+                src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              />
+              <div class="cards__content">
+                <div class="cards__content-txt">
+                  <h2 class="cards__content-title">La palette du goût</h2>
+                  <p class="cards__content-subtitle">Ménilmontant</p>
+                </div>
+                <div class="cards__content-rating">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="cards">
+            <a href="./pages/menu4.html" class="cards__link">
+              <img
+                src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              />
+              <div class="cards__content">
+                <div class="cards__content-txt">
+                  <h2 class="cards__content-title">La palette du goût</h2>
+                  <p class="cards__content-subtitle">Ménilmontant</p>
+                </div>
+                <div class="cards__content-rating">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="./images/logo/ohmyfood@2x.svg" />
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__menu">
+          <li class="footer__menu-item">
+            <span class="footer__menu-item-icon"
+              ><i class="fa-solid fa-utensils"></i
+            ></span>
+            <a href="#">Proposer un restaurant</a>
+          </li>
+          <li class="footer__menu-item">
+            <span class="footer__menu-item-icon"
+              ><i class="fa-solid fa-handshake"></i
+            ></span>
+            <a href="#">Devenir partenaire</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#">Mentions légales</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
