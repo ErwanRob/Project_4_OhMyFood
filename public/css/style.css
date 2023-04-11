@@ -1,32 +1,5 @@
-
-body{
-    margin: 0;
+.header__logo {
+  width: 25px;
 }
 
-.restaurants img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  box-sizing: border-box;
-  border-radius: 20px 20px 0px 0px;
-}
-
-.showcase img{
-  width: 100%;
-  height: auto;
-}
-
-.cards__link{
-    width: 100%;
-    height: 100%;
-}
-
-.cards {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.6));
-    display: flex;
-    box-sizing: border-box;
-    width: auto;
-}
+/*# sourceMappingURL=style.css.map */
