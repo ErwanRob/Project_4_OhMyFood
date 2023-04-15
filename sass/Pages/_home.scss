@@ -62,8 +62,10 @@
       border-radius: 20px;
       background-color: darken($color-quinary, 4%);
       @media (min-width: 768px) {
-        width: 30%;
+        width: 33%;
         flex-grow: 1;
+        flex-basis:18.75rem;
+        justify-content: center;
       }
       &-txt {
         display: flex;

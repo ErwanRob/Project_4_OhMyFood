@@ -156,8 +156,10 @@
 }
 @media (min-width: 768px) {
   .steps__list-cards {
-    width: 30%;
+    width: 33%;
     flex-grow: 1;
+    flex-basis: 18.75rem;
+    justify-content: center;
   }
 }
 .steps__list-cards-txt {
@@ -349,11 +351,21 @@
 
 body {
   width: 100%;
+  max-width: 1440px;
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
+}
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
 }
 
 main {

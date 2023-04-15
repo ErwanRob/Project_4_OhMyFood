@@ -10,8 +10,15 @@
 @import "./Layout/header";
 
 body {
-
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
   width: 100%;
+  max-width: 1440px;
   padding: 0;
   margin: 0;
   font-family: $font-family-Roboto;
