@@ -1,0 +1,59 @@
+.steps-icon {
+  @include flex-center;
+  font-size: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  &::before {
+    @include flex-center;
+  }
+  &--grey {
+    color: darken($color-quinary, 50%);
+  }
+  &--purple {
+    color: $color-primary;
+  }
+}
+
+.number-icon {
+  background-color: $color-primary;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  &::before {
+    color: $color-quinary;
+  }
+}
+
+.footer-icon {
+  @include flex-center;
+  width: 0.813rem;
+  height: 0.813rem;
+  &::before {
+    @include flex-center;
+    font-size: 0.75rem;
+    color: $color-quinary;
+  }
+}
+
+.heart-icon {
+  @include flex-center;
+  //override by work-around
+  /*  font-size: 1.5rem;
+  width:1.5rem;
+  height: 1.5rem; */
+  &::before {
+    /*  color: $color-secondary; */
+  }
+  &:hover {
+    color: red;
+  }
+}
+
+/*work-around which does not work in Mozilla etc*/
+.fa-heart {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}

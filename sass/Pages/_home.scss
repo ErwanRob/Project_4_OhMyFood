@@ -1,0 +1,148 @@
+.explore {
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  background-color: darken($color-quinary, 4%);
+  box-sizing: border-box;
+  &__title {
+    width: 70%;
+    margin: 40px 0px 20px 0px;
+    &-txt {
+      @include section-title-style;
+      margin: 0px;
+    }
+  }
+  &__detail {
+    width: 90%;
+    &-txt {
+      font-size: font-size($font-size-card-title);
+      font-weight: $font-weight-normal;
+      margin: 0px;
+    }
+  }
+  &__link {
+    margin: 27px 0px 57px 0px;
+    &-button {
+      /*---------include de compo-------------------- */
+    }
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 20px 68px 20px;
+  gap: 1.563rem;
+  box-sizing: border-box;
+  @media (min-width: 768px) {
+    padding: 50px 180px;
+  }
+  &__title {
+    &-txt {
+      @include section-title-style;
+      margin: 0px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.563rem;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    &-cards {
+      @include steps-shadow;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 1.438rem;
+      height: 72px;
+      border-radius: 20px;
+      background-color: darken($color-quinary, 4%);
+      @media (min-width: 768px) {
+        width: 30%;
+        flex-grow: 1;
+      }
+      &-txt {
+        display: flex;
+        @include steps-style;
+        width: 65%;
+        margin: 0px;
+        padding: 0px;
+        justify-content: flex-start;
+        align-self: center;
+      }
+    }
+  }
+}
+
+.restaurants {
+  background-color: darken($color-quinary, 4%);
+  display: flex;
+  flex-direction: column;
+  padding: 55px 17px 65px 17px;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  @media (min-width: 768px) {
+    padding: 30px 180px;
+  }
+  &__title {
+    @include section-title-style;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: 50px;
+      column-gap: 100px;
+    }
+  }
+}
+
+.cards {
+  img {
+    width: 100%;
+    height: 174px;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+    object-position: 50% 61%;
+  }
+  border-radius: 20px;
+  &__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: darken($color-quinary, 100%);
+    text-decoration: none;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &-txt {
+      padding: 16px 0px 12px 13px;
+      margin: 0 13px 0 0;
+      width: 100%;
+      &-title {
+        @include rest-card-title-style;
+        margin: 0px 0px 5px 0px;
+      }
+      &-byline {
+        @include rest-card-byline-style;
+      }
+    }
+    &-rating {
+      padding: 23px 25px 33px 0;
+    }
+  }
+  @media (min-width: 768px) {
+    width: 40%;
+    flex-grow: 1;
+  }
+}

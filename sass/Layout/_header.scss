@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &__logo {
+    width: 100%;
+    z-index: 1;
+    height: 63px;
+    @include flex-center;
+    @include heading-shadow;
+    &-title {
+      @include heading-style;
+      margin: 14px 0px 5px 0px;
+      padding: 0px;
+    }
+  }
+  &__localisation {
+    width: 100%;
+    z-index: 0;
+    height: 50px;
+    gap: 1.063rem;
+    background-color: darken($color-quinary, 8%);
+    @include flex-center;
+    &-txt {
+      margin: 0px;
+      font-size: font-size($font-size-base);
+      font-weight: $font-weight-bold;
+    }
+  }
+}

@@ -1,16 +1,33 @@
 @import "./Utils/variables";
 @import "./Utils/functions";
 @import "./Utils/mixins";
+@import "./Base/typography";
+@import "./Components/buttons";
+@import "./Components/icons";
+@import "./Pages/home";
+@import "./Pages/menu1";
+@import "./Layout/footer";
+@import "./Layout/header";
 
-.header{
-    &__logo{
-       width:25px;
-    }
+body {
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: $font-family-Roboto;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+}
 
+h1, h2, h3, h4, h5, p{
+    margin: 0px;
+    padding: 0px;
+}
 
-
-
-
+/* Taille des image height 174 hauteur content 77 */
 

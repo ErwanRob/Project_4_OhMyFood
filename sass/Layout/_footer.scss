@@ -1,0 +1,42 @@
+.footer{
+    display:flex;
+    flex-direction: column;
+    padding: 22px 25px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: darken($color-quinary, 79%);
+    gap: 1rem;
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+        gap:1.5rem;
+      }
+    &__logo{
+        &-title{
+            @include footer-style;
+        }
+    }
+    &__nav{
+        @include flex-center;
+    }
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 7px;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            gap:1rem;
+          }
+        &-item{
+            @include flex-center;
+            flex-direction: row;
+            gap: 11px;
+            &-link{
+                text-decoration: none;
+                color: $color-quinary;
+            }
+        }
+    }
+}

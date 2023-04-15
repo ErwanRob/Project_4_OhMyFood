@@ -1,0 +1,69 @@
+//Font families
+$font-family-Roboto: "Roboto", sans-serif;
+$font-family-Shrikhand: "Shrikhand", cursive;
+
+//Font sizes
+$font-size-base: 16px;
+$font-size-card-title: 18px;
+$font-size-rest-byline: 17px;
+$font-size-menu-byline: 15px;
+$font-size-section: 24px;
+$font-size-heading: 30px;
+
+//Font weights
+$font-weight-normal: 300;
+$font-weight-bold: 500;
+$font-weight-bolder: 700;
+
+
+//REM fonction
+@function font-size($size) {
+  @return calc($size / $font-size-base) * 1rem;
+}
+
+//Mixins
+@mixin heading-style {
+  font-family: $font-family-Shrikhand;
+  font-size: font-size($font-size-heading);
+  font-weight: 400;
+  color: darken($color-quinary, 100%);
+}
+
+@mixin footer-style {
+    font-family: $font-family-Shrikhand;
+    font-size: font-size($font-size-card-title);
+    font-weight: 400;
+    color: $color-quinary;
+  }
+
+@mixin section-title-style {
+  font-weight: 700;
+  font-size: font-size($font-size-section);
+  line-height: 28px;
+}
+
+@mixin steps-style {
+  font-weight: 500;
+  font-size: font-size($font-size-base);
+  line-height: 19px;
+}
+
+@mixin rest-card-title-style {
+  font-size: font-size($font-size-card-title);
+  font-weight: 700;
+  line-height: 21px;
+}
+
+@mixin rest-card-byline-style {
+  font-size: font-size($font-size-rest-byline);
+  font-weight: 300;
+  line-height: 20px;
+}
+
+/* @mixin menu-card-title-style {
+ 
+}
+
+@mixin menu-card-byline-style {
+ 
+}  */
