@@ -10,7 +10,8 @@
     @include heading-shadow;
     &-title {
       @include heading-style;
-      margin: 14px 0px 5px 0px;
+      font-size: font-size($font-size-heading);
+      margin: 14px 0px 13px 0px;
       padding: 0px;
     }
   }
@@ -28,3 +29,31 @@
     }
   }
 }
+
+.header-menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 17px;
+    box-sizing: border-box;
+    &__back{
+      @include flex-center;
+      &-arrow{
+        padding: 6px;
+        color: black;
+      }
+    }
+
+    &__logo {
+      width: 100%;
+      z-index: 1;
+      height: 63px;
+      @include flex-center;
+      &-title {
+        @include heading-style;
+        margin: 14px 0px 13px -26px;
+        padding: 0px;
+      }
+    }
+  }
+  

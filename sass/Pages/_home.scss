@@ -23,9 +23,6 @@
   }
   &__link {
     margin: 27px 0px 57px 0px;
-    /* &-button {
-      ---------include de compo-------------------- 
-    } */
   }
 }
 
@@ -37,6 +34,7 @@
   box-sizing: border-box;
   @media (min-width: 768px) {
     padding: 50px 180px;
+    width: 100%;
   }
   &__title {
     &-txt {
@@ -48,23 +46,24 @@
     display: flex;
     flex-direction: column;
     gap: 1.563rem;
+    box-sizing: border-box;
+    padding-left: 0.813rem;
     @media (min-width: 768px) {
+      padding-left: 0px;
+    }
+    @media (min-width: 1024px) {
       flex-direction: row;
-      flex-wrap: wrap;
     }
     &-cards {
       @include steps-shadow;
       width: 100%;
       display: flex;
       flex-direction: row;
-      gap: 1.438rem;
+      gap: 1.688rem;
       height: 72px;
       border-radius: 20px;
       background-color: darken($color-quinary, 4%);
       @media (min-width: 768px) {
-        width: 33%;
-        flex-grow: 1;
-        flex-basis:18.75rem;
         justify-content: center;
       }
       &-txt {
@@ -100,21 +99,26 @@
     @media (min-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
+      row-gap: 25px;
+      column-gap: 50px;
+    }
+    @media (min-width: 1024px) {
       row-gap: 50px;
       column-gap: 100px;
     }
   }
 }
 
-.cards {
+.home-cards {
+  @include home-cards-shadow;
+  border-radius: 15px;
   img {
     width: 100%;
     height: 174px;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
     object-fit: cover;
     object-position: 50% 61%;
   }
-  border-radius: 20px;
   &__link {
     display: flex;
     flex-direction: column;
@@ -146,5 +150,7 @@
   @media (min-width: 768px) {
     width: 40%;
     flex-grow: 1;
+    min-width: 240px;
+    //QUESTION : Est ce que ca vaux le coup, ou pas?
   }
 }

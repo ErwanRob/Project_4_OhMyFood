@@ -8,6 +8,7 @@ $font-size-card-title: 18px;
 $font-size-rest-byline: 17px;
 $font-size-menu-byline: 15px;
 $font-size-section: 24px;
+$font-size-heading-menu-page: 28px;
 $font-size-heading: 30px;
 
 //Font weights
@@ -24,7 +25,6 @@ $font-weight-bolder: 700;
 //Mixins
 @mixin heading-style {
   font-family: $font-family-Shrikhand;
-  font-size: font-size($font-size-heading);
   font-weight: 400;
   color: darken($color-quinary, 100%);
 }

@@ -1,0 +1,120 @@
+main {
+  display: flex;
+  flex-direction: column;
+  .showcase {
+    z-index: 0;
+  }
+  .menu-display {
+    z-index: 1;
+  }
+}
+.showcase {
+  @media (min-width: 768px) {
+    width: 100%;
+    flex-grow: 1;
+  }
+  img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+.menu-display {
+  @media (min-width: 768px) {
+    width: 75%;
+    > * {
+      width: 60%;
+      align-self: center;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  margin-top: -2rem;
+  border-radius: 30px 30px 0 0;
+  padding: 0px 13px 40px 13px;
+  gap: 40px;
+  background-color: darken($color-quinary, 3%);
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 32px 4px 0px 4px;
+    @media (min-width: 768px) {
+     justify-content: center;
+     gap: 1.5rem;
+    }
+    &-txt {
+      @include heading-style;
+      font-size: font-size($font-size-heading-menu-page);
+    }
+  }
+  /*-----------------------------*/
+  &__starters {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    &-title {
+    }
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  &__dishes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    &-title {
+    }
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  &__desserts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    &-title {
+    }
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  /*--------------------------------*/
+  &__order {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// Call this cards menu or find another way because change home page cards
+.menu-cards {
+  //
+  background-color: $color-quinary;
+  //
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 14px 15px 14px 15px;
+  @include heading-shadow;
+  &__txt {
+    &-title {
+    }
+    &-byline {
+    }
+  }
+  &__price {
+    @include flex-center;
+  }
+}

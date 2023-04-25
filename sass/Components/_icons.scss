@@ -3,6 +3,10 @@
   font-size: 1.25rem;
   width: 1.5rem;
   height: 1.5rem;
+  margin-left: 0.813rem;
+  /* @media (min-width:1024px){
+    margin-left: 1.3rem;
+  } */
   &::before {
     @include flex-center;
   }
@@ -18,9 +22,13 @@
   background-color: $color-primary;
   border-radius: 1rem;
   font-size: 0.875rem;
+  margin: -0.813rem;
   &::before {
     color: $color-quinary;
   }
+  /* @media (min-width:1024px){
+    margin-left: -1.3rem;
+  } */
 }
 
 .footer-icon {

@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -15,20 +21,17 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__back">
-        <a href="../index.html">
-          <span class="header__back-arrow"
-            ><i class="fa-solid fa-arrow-left"></i
-          ></span>
+    <header class="header-menu">
+      <div class="header-menu__back">
+        <a href="../index.html" class="header-menu__back-arrow">
+          <i class="fa-solid fa-arrow-left"></i>
         </a>
       </div>
-      <div class="header__logo">
-        <img src="../images/logo/ohmyfood@2x.svg" />
+      <div class="header-menu__logo">
+        <h1 class="header-menu__logo-title">ohmyfood</h1>
       </div>
     </header>
     <main>
-      Menu 1 page
       <div class="showcase">
         <img
           src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -37,41 +40,38 @@
       <div class="menu-display">
         <!-- ----------------------------- Title --------------------------- -->
         <div class="menu-display__title">
-          <h1>La palette du goût</h1>
-          <span>
-            <i class="fa-solid fa-heart"></i>
-          </span>
+          <h2 class="menu-display__title-txt">La palette du goût</h2>
+          <i class="fa-solid fa-heart heart-icon"></i>
         </div>
         <!-- ----------------------------- Starters --------------------------- -->
 
-        <!--  Remplacer les div des cartes par des articles -->
         <div class="menu-display__starters">
           <div class="menu-display__starters-title">
             <h3>Entrées</h3>
           </div>
           <div class="menu-display__starters-menu">
-            <article class="cards">
-              <div class="cards__txt">
-                <h4 class="cards__txt-title">Fricassée d'escargots</h4>
-                <p class="cards__txt-byline">Au piment d'Espelette</p>
+            <article class="menu-cards">
+              <div class="menu-cards__txt">
+                <h4 class="menu-cards__txt-title">Fricassée d'escargots</h4>
+                <p class="menu-cards__txt-byline">Au piment d'Espelette</p>
               </div>
-              <p class="cards__price">25<span class="euro">€</span></p>
+              <p class="menu-cards__price">25<span class="euro">€</span></p>
             </article>
-            <article class="cards">
-              <div class="cards__txt">
-                <h4 class="cards__txt-title">Foie gras de canard mi-cuit</h4>
-                <p class="cards__txt-byline">Et ses copeaux de truffe noire</p>
+            <article class="menu-cards">
+              <div class="menu-cards__txt">
+                <h4 class="menu-cards__txt-title">Foie gras de canard mi-cuit</h4>
+                <p class="menu-cards__txt-byline">Et ses copeaux de truffe noire</p>
               </div>
-              <p class="cards__price">35<span class="euro">€</span></p>
+              <p class="menu-cards__price">35<span class="euro">€</span></p>
             </article>
-            <article class="cards">
-              <div class="cards__txt">
-                <h4 class="cards__txt-title">Œuf au plat</h4>
-                <p class="cards__txt-byline">
+            <article class="menu-cards">
+              <div class="menu-cards__txt">
+                <h4 class="menu-cards__txt-title">Œuf au plat</h4>
+                <p class="menu-cards__txt-byline">
                   Assaisonné à la truffe sur lit de caviar
                 </p>
               </div>
-              <p class="cards__price">20<span class="euro">€</span></p>
+              <p class="menu-cards__price">20<span class="euro">€</span></p>
             </article>
           </div>
         </div>
@@ -82,28 +82,28 @@
             <h3>Plats</h3>
           </div>
           <div class="menu-display__dishes-menu">
-            <article class="cards">
-              <div class="cards__txt">
-                <h4 class="cards__txt-title">Fricassée d'escargots</h4>
-                <p class="cards__txt-byline">Au piment d'Espelette</p>
+            <article class="menu-cards">
+              <div class="menu-cards__txt">
+                <h4 class="menu-cards__txt-title">Fricassée d'escargots</h4>
+                <p class="menu-cards__txt-byline">Au piment d'Espelette</p>
               </div>
-              <p class="cards__price">25<span class="euro">€</span></p>
+              <p class="menu-cards__price">25<span class="euro">€</span></p>
             </article>
-            <article class="cards">
-              <div class="cards__txt">
-                <h4 class="cards__txt-title">Foie gras de canard mi-cuit</h4>
-                <p class="cards__txt-byline">Et ses copeaux de truffe noire</p>
+            <article class="menu-cards">
+              <div class="menu-cards__txt">
+                <h4 class="menu-cards__txt-title">Foie gras de canard mi-cuit</h4>
+                <p class="menu-cards__txt-byline">Et ses copeaux de truffe noire</p>
               </div>
-              <p class="cards__price">35<span class="euro">€</span></p>
+              <p class="menu-cards__price">35<span class="euro">€</span></p>
             </article>
-            <article class="cards">
-              <div class="cards__txt">
-                <h4 class="cards__txt-title">Œuf au plat</h4>
-                <p class="cards__txt-byline">
+            <article class="menu-cards">
+              <div class="menu-cards__txt">
+                <h4 class="menu-cards__txt-title">Œuf au plat</h4>
+                <p class="menu-cards__txt-byline">
                   Assaisonné à la truffe sur lit de caviar
                 </p>
               </div>
-              <p class="cards__price">20<span class="euro">€</span></p>
+              <p class="menu-cards__price">20<span class="euro">€</span></p>
             </article>
           </div>
         </div>
@@ -113,34 +113,36 @@
             <h3>Desserts</h3>
           </div>
           <div class="menu-display__desserts-menu">
-            <article class="cards">
-              <div class="cards__txt">
-                <h4 class="cards__txt-title">Fricassée d'escargots</h4>
-                <p class="cards__txt-byline">Au piment d'Espelette</p>
+            <article class="menu-cards">
+              <div class="menu-cards__txt">
+                <h4 class="menu-cards__txt-title">Fricassée d'escargots</h4>
+                <p class="menu-cards__txt-byline">Au piment d'Espelette</p>
               </div>
-              <p class="cards__price">25<span class="euro">€</span></p>
+              <p class="menu-cards__price">25<span class="euro">€</span></p>
             </article>
-            <article class="cards">
-              <div class="cards__txt">
-                <h4 class="cards__txt-title">Foie gras de canard mi-cuit</h4>
-                <p class="cards__txt-byline">Et ses copeaux de truffe noire</p>
+            <article class="menu-cards">
+              <div class="menu-cards__txt">
+                <h4 class="menu-cards__txt-title">Foie gras de canard mi-cuit</h4>
+                <p class="menu-cards__txt-byline">Et ses copeaux de truffe noire</p>
               </div>
-              <p class="cards__price">35<span class="euro">€</span></p>
+              <p class="menu-cards__price">35<span class="euro">€</span></p>
             </article>
-            <article class="cards">
-              <div class="cards__txt">
-                <h4 class="cards__txt-title">Œuf au plat</h4>
-                <p class="cards__txt-byline">
+            <article class="menu-cards">
+              <div class="menu-cards__txt">
+                <h4 class="menu-cards__txt-title">Œuf au plat</h4>
+                <p class="menu-cards__txt-byline">
                   Assaisonné à la truffe sur lit de caviar
                 </p>
               </div>
-              <p class="cards__price">20<span class="euro">€</span></p>
+              <p class="menu-cards__price">20<span class="euro">€</span></p>
             </article>
           </div>
         </div>
         <!-- ----------------------------- Orders --------------------------- -->
         <div class="menu-display__order">
-          <button class="menu-display__order-button">Commander</button>
+          <button class="menu-display__order-button base-button grad-rounded">
+            Commander
+          </button>
         </div>
       </div>
     </main>
@@ -148,27 +150,25 @@
     <!-- ----------------------------- footer --------------------------- -->
     <footer class="footer">
       <div class="footer__logo">
-        <img src="../images/logo/ohmyfood@2x.svg" />
+        <h4 class="footer__logo-title">ohmyfood</h4>
       </div>
       <nav class="footer__nav">
         <ul class="footer__menu">
           <li class="footer__menu-item">
-            <span class="footer__menu-item-icon"
-              ><i class="fa-solid fa-utensils"></i
-            ></span>
-            <a href="#">Proposer un restaurant</a>
+            <i class="fa-solid fa-utensils footer-icon"></i>
+            <a href="#" class="footer__menu-item-link"
+              >Proposer un restaurant</a
+            >
           </li>
           <li class="footer__menu-item">
-            <span class="footer__menu-item-icon"
-              ><i class="fa-solid fa-handshake"></i
-            ></span>
-            <a href="#">Devenir partenaire</a>
+            <i class="fa-solid fa-handshake-angle footer-icon"></i>
+            <a href="#" class="footer__menu-item-link">Devenir partenaire</a>
           </li>
           <li class="footer__menu-item">
-            <a href="#">Mentions légales</a>
+            <a href="#" class="footer__menu-item-link">Mentions légales</a>
           </li>
           <li class="footer__menu-item">
-            <a href="#">Contact</a>
+            <a href="#" class="footer__menu-item-link">Contact</a>
           </li>
         </ul>
       </nav>
