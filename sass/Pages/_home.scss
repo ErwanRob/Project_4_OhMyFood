@@ -17,7 +17,7 @@
     width: 90%;
     &-txt {
       font-size: font-size($font-size-card-title);
-      font-weight: $font-weight-normal;
+      font-weight: $font-weight-light;
       margin: 0px;
     }
   }
@@ -67,8 +67,8 @@
         justify-content: center;
       }
       &-txt {
-        display: flex;
         @include steps-style;
+        display: flex;
         width: 65%;
         margin: 0px;
         padding: 0px;
@@ -136,21 +136,21 @@
       margin: 0 13px 0 0;
       width: 100%;
       &-title {
-        @include rest-card-title-style;
+        @include home-card-title-style;
         margin: 0px 0px 5px 0px;
       }
       &-byline {
-        @include rest-card-byline-style;
+        @include home-card-byline-style;
       }
     }
     &-rating {
       padding: 23px 25px 33px 0;
     }
   }
+  
   @media (min-width: 768px) {
     width: 40%;
     flex-grow: 1;
     min-width: 240px;
-    //QUESTION : Est ce que ca vaux le coup, ou pas?
   }
 }

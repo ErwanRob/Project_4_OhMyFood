@@ -25,35 +25,45 @@
     &-txt {
       margin: 0px;
       font-size: font-size($font-size-base);
-      font-weight: $font-weight-bold;
+      font-weight: $font-weight-medium;
     }
   }
 }
 
 .header-menu {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 0 17px;
-    box-sizing: border-box;
-    &__back{
-      @include flex-center;
-      &-arrow{
-        padding: 6px;
-        color: black;
-      }
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 17px;
+  box-sizing: border-box;
+  height: 63px;
+  &__back {
+    height: 60%;
+    width: 30px;
+    @include flex-center;
+    &:hover {
+      transition: transform 100ms;
+      transform: scale(1.5) translateX(-20%);
     }
-
-    &__logo {
-      width: 100%;
-      z-index: 1;
-      height: 63px;
-      @include flex-center;
-      &-title {
-        @include heading-style;
-        margin: 14px 0px 13px -26px;
-        padding: 0px;
+    &-arrow {
+      padding: 6px;
+      color: black;
+      &:hover {
+        transition: transform 300ms ease-out 500ms;
+        transform: translate(-20%);
       }
     }
   }
-  
+
+  &__logo {
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+    @include flex-center;
+    &-title {
+      @include heading-style;
+      margin: 14px 0px 13px -26px;
+      padding: 0px;
+    }
+  }
+}

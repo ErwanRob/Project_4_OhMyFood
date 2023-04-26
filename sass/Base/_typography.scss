@@ -1,8 +1,9 @@
-//Font families
+//// VARIABLES ////
+/*-- Font families --*/
 $font-family-Roboto: "Roboto", sans-serif;
 $font-family-Shrikhand: "Shrikhand", cursive;
 
-//Font sizes
+/*-- Font sizes --*/
 $font-size-base: 16px;
 $font-size-card-title: 18px;
 $font-size-rest-byline: 17px;
@@ -11,59 +12,84 @@ $font-size-section: 24px;
 $font-size-heading-menu-page: 28px;
 $font-size-heading: 30px;
 
-//Font weights
-$font-weight-normal: 300;
-$font-weight-bold: 500;
-$font-weight-bolder: 700;
+/*-- Font weights --*/
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
 
-
-//REM fonction
+//// REM FUNCTION ////
 @function font-size($size) {
   @return calc($size / $font-size-base) * 1rem;
 }
 
-//Mixins
+//// MIXINS ////
 @mixin heading-style {
   font-family: $font-family-Shrikhand;
-  font-weight: 400;
+  font-weight: $font-weight-regular;
   color: darken($color-quinary, 100%);
 }
 
 @mixin footer-style {
-    font-family: $font-family-Shrikhand;
-    font-size: font-size($font-size-card-title);
-    font-weight: 400;
-    color: $color-quinary;
-  }
-
+  font-family: $font-family-Shrikhand;
+  font-size: font-size($font-size-card-title);
+  font-weight: $font-weight-regular;
+  color: $color-quinary;
+}
 @mixin section-title-style {
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   font-size: font-size($font-size-section);
   line-height: 28px;
 }
 
 @mixin steps-style {
-  font-weight: 500;
+  font-weight: $font-weight-medium;
   font-size: font-size($font-size-base);
   line-height: 19px;
 }
 
-@mixin rest-card-title-style {
+@mixin menu-dish-title-style{
+  font-size: font-size($font-size-base);
+  font-weight: $font-weight-light;
+  line-height: 18.75px;
+  text-transform:uppercase;
+}
+
+/*-- Cards --*/
+@mixin home-card-title-style {
   font-size: font-size($font-size-card-title);
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   line-height: 21px;
 }
 
-@mixin rest-card-byline-style {
+@mixin home-card-byline-style {
   font-size: font-size($font-size-rest-byline);
-  font-weight: 300;
+  font-weight: $font-weight-light;
   line-height: 20px;
 }
 
-/* @mixin menu-card-title-style {
- 
+@mixin menu-card-title-style {
+  font-size: font-size($font-size-card-title);
+  font-weight: $font-weight-medium;
+  line-height: 21px;
 }
 
 @mixin menu-card-byline-style {
- 
-}  */
+  font-size: font-size($font-size-menu-byline);
+  font-weight: $font-weight-light;
+  line-height: 18px;
+}
+
+@mixin menu-card-price-style{
+  font-size: font-size($font-size-menu-byline);
+  font-weight: $font-weight-bold;
+  line-height: 18px;
+}
+
+/*-- Button --*/
+@mixin button-style {
+  font-family: $font-family-Roboto;
+  font-size: font-size($font-size-base);
+  font-weight: $font-weight-medium;
+  line-height: 18.75px;
+}

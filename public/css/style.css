@@ -1,10 +1,8 @@
-/* @mixin menu-card-title-style {
-
-}
-
-@mixin menu-card-byline-style {
-
-}  */
+/*-- Font families --*/
+/*-- Font sizes --*/
+/*-- Font weights --*/
+/*-- Cards --*/
+/*-- Button --*/
 .base-button {
   padding: 0.813rem 1.188rem;
   color: #FFF;
@@ -12,6 +10,10 @@
   height: 3.125rem;
 }
 .base-button a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 18.75px;
   text-decoration: none;
   color: #FFF;
 }
@@ -24,6 +26,11 @@
   border-radius: 25px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 200ms;
+}
+.grad-rounded:hover {
+  opacity: 0.8;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.45);
 }
 
 .steps-icon {
@@ -215,21 +222,32 @@
   width: 100%;
   padding: 0 17px;
   box-sizing: border-box;
+  height: 63px;
 }
 .header-menu__back {
+  height: 60%;
+  width: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   align-self: center;
 }
+.header-menu__back:hover {
+  transition: transform 100ms;
+  transform: scale(1.5) translateX(-20%);
+}
 .header-menu__back-arrow {
   padding: 6px;
   color: black;
 }
+.header-menu__back-arrow:hover {
+  transition: transform 300ms ease-out 500ms;
+  transform: translate(-20%);
+}
 .header-menu__logo {
   width: 100%;
   z-index: 1;
-  height: 63px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -328,10 +346,10 @@
   }
 }
 .steps__list-cards-txt {
-  display: flex;
   font-weight: 500;
   font-size: 1rem;
   line-height: 19px;
+  display: flex;
   width: 65%;
   margin: 0px;
   padding: 0px;
@@ -460,7 +478,7 @@ main .menu-display {
   padding: 0px 13px 40px 13px;
   gap: 40px;
   background-color: #f7f7f7;
-  /*-----------------------------*/
+  /*------------ WARNING try to group them with a ghost class-----------------*/
   /*--------------------------------*/
 }
 @media (min-width: 768px) {
@@ -495,6 +513,24 @@ main .menu-display {
   flex-direction: column;
   gap: 12px;
 }
+.menu-display__starters-title {
+  position: relative;
+}
+.menu-display__starters-title-txt {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 18.75px;
+  text-transform: uppercase;
+}
+.menu-display__starters-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 2.5rem;
+  border-bottom: 3px solid #99E2D0;
+}
 .menu-display__starters-menu {
   display: flex;
   flex-direction: column;
@@ -505,6 +541,24 @@ main .menu-display {
   flex-direction: column;
   gap: 12px;
 }
+.menu-display__dishes-title {
+  position: relative;
+}
+.menu-display__dishes-title-txt {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 18.75px;
+  text-transform: uppercase;
+}
+.menu-display__dishes-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 2.5rem;
+  border-bottom: 3px solid #99E2D0;
+}
 .menu-display__dishes-menu {
   display: flex;
   flex-direction: column;
@@ -514,6 +568,24 @@ main .menu-display {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+.menu-display__desserts-title {
+  position: relative;
+}
+.menu-display__desserts-title-txt {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 18.75px;
+  text-transform: uppercase;
+}
+.menu-display__desserts-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 2.5rem;
+  border-bottom: 3px solid #99E2D0;
 }
 .menu-display__desserts-menu {
   display: flex;
@@ -534,11 +606,25 @@ main .menu-display {
   padding: 14px 15px 14px 15px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
+.menu-cards__txt-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 21px;
+}
+.menu-cards__txt-byline {
+  font-size: 0.9375rem;
+  font-weight: 300;
+  line-height: 18px;
+}
 .menu-cards__price {
   display: flex;
   justify-content: center;
   align-items: center;
   align-self: center;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 18px;
+  align-self: flex-end;
 }
 
 body {

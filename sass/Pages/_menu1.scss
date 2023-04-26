@@ -42,20 +42,33 @@ main {
     justify-content: space-between;
     margin: 32px 4px 0px 4px;
     @media (min-width: 768px) {
-     justify-content: center;
-     gap: 1.5rem;
+      justify-content: center;
+      gap: 1.5rem;
     }
     &-txt {
       @include heading-style;
       font-size: font-size($font-size-heading-menu-page);
     }
   }
-  /*-----------------------------*/
+  /*------------ WARNING try to group them with a ghost class-----------------*/
   &__starters {
     display: flex;
     flex-direction: column;
     gap: 12px;
     &-title {
+      position: relative;
+      &-txt{
+        @include menu-dish-title-style;
+      }
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        width:2.5rem;
+        border-bottom: 3px solid $color-tertiary;
+      }
     }
     &-menu {
       display: flex;
@@ -69,6 +82,19 @@ main {
     flex-direction: column;
     gap: 12px;
     &-title {
+      position: relative;
+      &-txt{
+        @include menu-dish-title-style;
+      }
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        width:2.5rem;
+        border-bottom: 3px solid $color-tertiary;
+      }
     }
     &-menu {
       display: flex;
@@ -82,6 +108,19 @@ main {
     flex-direction: column;
     gap: 12px;
     &-title {
+      position: relative;
+      &-txt{
+        @include menu-dish-title-style;
+      }
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        width:2.5rem;
+        border-bottom: 3px solid $color-tertiary;
+      }
     }
     &-menu {
       display: flex;
@@ -108,13 +147,18 @@ main {
   border-radius: 20px;
   padding: 14px 15px 14px 15px;
   @include heading-shadow;
+  // WARNING (Finish)
   &__txt {
     &-title {
+      @include menu-card-title-style;
     }
     &-byline {
+      @include menu-card-byline-style;
     }
   }
   &__price {
     @include flex-center;
+    @include menu-card-price-style;
+    align-self: flex-end;
   }
 }
