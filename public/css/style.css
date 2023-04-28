@@ -511,7 +511,7 @@ main .menu-display {
 .menu-display__starters {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1.25rem;
 }
 .menu-display__starters-title {
   position: relative;
@@ -539,7 +539,7 @@ main .menu-display {
 .menu-display__dishes {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1.25rem;
 }
 .menu-display__dishes-title {
   position: relative;
@@ -567,7 +567,7 @@ main .menu-display {
 .menu-display__desserts {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1.25rem;
 }
 .menu-display__desserts-title {
   position: relative;

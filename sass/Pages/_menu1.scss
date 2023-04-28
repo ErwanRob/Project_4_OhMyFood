@@ -54,10 +54,10 @@ main {
   &__starters {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 1.25rem;
     &-title {
       position: relative;
-      &-txt{
+      &-txt {
         @include menu-dish-title-style;
       }
       &::before {
@@ -66,7 +66,7 @@ main {
         position: absolute;
         bottom: -7px;
         left: 0;
-        width:2.5rem;
+        width: 2.5rem;
         border-bottom: 3px solid $color-tertiary;
       }
     }
@@ -80,10 +80,10 @@ main {
   &__dishes {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 1.25rem;
     &-title {
       position: relative;
-      &-txt{
+      &-txt {
         @include menu-dish-title-style;
       }
       &::before {
@@ -92,7 +92,7 @@ main {
         position: absolute;
         bottom: -7px;
         left: 0;
-        width:2.5rem;
+        width: 2.5rem;
         border-bottom: 3px solid $color-tertiary;
       }
     }
@@ -106,10 +106,10 @@ main {
   &__desserts {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 1.25rem;
     &-title {
       position: relative;
-      &-txt{
+      &-txt {
         @include menu-dish-title-style;
       }
       &::before {
@@ -118,7 +118,7 @@ main {
         position: absolute;
         bottom: -7px;
         left: 0;
-        width:2.5rem;
+        width: 2.5rem;
         border-bottom: 3px solid $color-tertiary;
       }
     }
