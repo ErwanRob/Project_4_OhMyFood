@@ -60,7 +60,7 @@ main {
       &-txt {
         @include menu-dish-title-style;
       }
-      &::before {
+      &::after {
         content: "";
         display: block;
         position: absolute;
@@ -86,7 +86,7 @@ main {
       &-txt {
         @include menu-dish-title-style;
       }
-      &::before {
+      &::after {
         content: "";
         display: block;
         position: absolute;
@@ -112,7 +112,7 @@ main {
       &-txt {
         @include menu-dish-title-style;
       }
-      &::before {
+      &::after {
         content: "";
         display: block;
         position: absolute;

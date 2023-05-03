@@ -1,3 +1,74 @@
+@keyframes menu-slide {
+  0% {
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+.starters-title-slide {
+  animation: menu-slide 500ms 100ms both ease-out;
+}
+
+.dishes-title-slide {
+  animation: menu-slide 500ms 100ms both ease-out;
+}
+
+.desserts-title-slide {
+  animation: menu-slide 500ms 100ms both ease-out;
+}
+
+.starters-card1-slide {
+  animation: menu-slide 300ms 600ms both ease-out;
+}
+
+.starters-card2-slide {
+  animation: menu-slide 300ms 650ms both ease-out;
+}
+
+.starters-card3-slide {
+  animation: menu-slide 300ms 700ms both ease-out;
+}
+
+.dishes-card1-slide {
+  animation: menu-slide 300ms 750ms both ease-out;
+}
+
+.dishes-card2-slide {
+  animation: menu-slide 300ms 800ms both ease-out;
+}
+
+.dishes-card3-slide {
+  animation: menu-slide 300ms 850ms both ease-out;
+}
+
+.desserts-card1-slide {
+  animation: menu-slide 300ms 850ms both ease-out;
+}
+
+.desserts-card2-slide {
+  animation: menu-slide 300ms 900ms both ease-out;
+}
+
+.desserts-card3-slide {
+  animation: menu-slide 300ms 950ms both ease-out;
+}
+
+.menu-display__starters-title::after {
+  animation: menu-slide 300ms 950ms both ease-out;
+}
+.menu-display__dishes-title::after {
+  animation: menu-slide 300ms 950ms both ease-out;
+}
+.menu-display__desserts-title::after {
+  animation: menu-slide 300ms 950ms both ease-out;
+}
+
 /*-- Font families --*/
 /*-- Font sizes --*/
 /*-- Font weights --*/
@@ -522,7 +593,7 @@ main .menu-display {
   line-height: 18.75px;
   text-transform: uppercase;
 }
-.menu-display__starters-title::before {
+.menu-display__starters-title::after {
   content: "";
   display: block;
   position: absolute;
@@ -550,7 +621,7 @@ main .menu-display {
   line-height: 18.75px;
   text-transform: uppercase;
 }
-.menu-display__dishes-title::before {
+.menu-display__dishes-title::after {
   content: "";
   display: block;
   position: absolute;
@@ -578,7 +649,7 @@ main .menu-display {
   line-height: 18.75px;
   text-transform: uppercase;
 }
-.menu-display__desserts-title::before {
+.menu-display__desserts-title::after {
   content: "";
   display: block;
   position: absolute;

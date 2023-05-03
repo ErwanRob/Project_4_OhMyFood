@@ -1,0 +1,97 @@
+// Menu slide on load//
+$anim-gap: 50ms;
+$title-slide-dur: 500ms;
+$title-slide-delay: 100ms;
+$card-slide-dur: 300ms;
+
+$starters-card-delay: $title-slide-dur + $title-slide-delay;
+$starters-card-delay2: $starters-card-delay + $anim-gap;
+$starters-card-delay3: $starters-card-delay2 + $anim-gap;
+
+$dishes-card-delay: $starters-card-delay3 + $anim-gap;
+$dishes-card-delay2: $dishes-card-delay + $anim-gap;
+$dishes-card-delay3: $dishes-card-delay2 + $anim-gap;
+
+$desserts-card-delay: $dishes-card-delay3;
+$desserts-card-delay2: $desserts-card-delay + $anim-gap;
+$desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
+
+@keyframes menu-slide {
+  0% {
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+.starters-title-slide {
+  animation: menu-slide $title-slide-dur $title-slide-delay both ease-out;
+}
+.dishes-title-slide {
+  animation: menu-slide $title-slide-dur $title-slide-delay both ease-out;
+}
+.desserts-title-slide {
+  animation: menu-slide $title-slide-dur $title-slide-delay both ease-out;
+}
+.starters-card1-slide {
+  animation: menu-slide $card-slide-dur $starters-card-delay both ease-out;
+}
+.starters-card2-slide {
+  animation: menu-slide $card-slide-dur $starters-card-delay2 both ease-out;
+}
+.starters-card3-slide {
+  animation: menu-slide $card-slide-dur $starters-card-delay3 both ease-out;
+}
+.dishes-card1-slide {
+  animation: menu-slide $card-slide-dur $dishes-card-delay both ease-out;
+}
+.dishes-card2-slide {
+  animation: menu-slide $card-slide-dur $dishes-card-delay2 both ease-out;
+}
+.dishes-card3-slide {
+  animation: menu-slide $card-slide-dur $dishes-card-delay3 both ease-out;
+}
+.desserts-card1-slide {
+  animation: menu-slide $card-slide-dur $desserts-card-delay both ease-out;
+}
+.desserts-card2-slide {
+  animation: menu-slide $card-slide-dur $desserts-card-delay2 both ease-out;
+}
+.desserts-card3-slide {
+  animation: menu-slide $card-slide-dur $desserts-card-delay3 both ease-out;
+}
+
+.menu-display {
+  &__starters {
+    &-title {
+      &::after {
+        animation: menu-slide $card-slide-dur $desserts-card-delay3 both
+          ease-out;
+      }
+    }
+  }
+  &__dishes {
+    &-title {
+      &::after {
+        animation: menu-slide $card-slide-dur $desserts-card-delay3 both
+          ease-out;
+      }
+    }
+  }
+  &__desserts {
+    &-title {
+      &::after {
+        animation: menu-slide $card-slide-dur $desserts-card-delay3 both
+          ease-out;
+      }
+    }
+  }
+}
+
+// Menu green checkbox on hover //
