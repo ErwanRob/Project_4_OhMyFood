@@ -42,6 +42,11 @@
   }
 }
 
+.check-icon{
+  color: white;
+  font-size: 1.5rem;
+}
+
 .heart-icon {
   @include flex-center;
   //override by work-around

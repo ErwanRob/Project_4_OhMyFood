@@ -95,3 +95,54 @@ $desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
 }
 
 // Menu green checkbox on hover //
+
+@keyframes checkbox-slide-in{
+  0% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes price-slide-in{
+  0% {
+    transform: translateX(3.25rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes checkbox-slide-out{
+  0% {
+    transform: translateX(0rem);
+  }
+  100% {
+    transform: translateX(3.75rem);
+  }
+}
+
+@keyframes price-slide-out{
+  0% {
+    transform: translateX(0rem);
+  }
+  100% {
+    transform: translateX(3.25rem);
+  }
+}
+
+.menu-cards{
+  &__checkbox{
+    animation: checkbox-slide-out 300ms both ease-out;
+  }
+  &__price {
+    animation: price-slide-out 300ms both ease-out;
+  }
+  :hover > &__checkbox {
+    animation: checkbox-slide-in 300ms both ease-out;
+  }
+  :hover > &__price {
+    animation: price-slide-in 300ms both ease-out;
+  }
+} 

@@ -69,6 +69,51 @@
   animation: menu-slide 300ms 950ms both ease-out;
 }
 
+@keyframes checkbox-slide-in {
+  0% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes price-slide-in {
+  0% {
+    transform: translateX(3.25rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes checkbox-slide-out {
+  0% {
+    transform: translateX(0rem);
+  }
+  100% {
+    transform: translateX(3.75rem);
+  }
+}
+@keyframes price-slide-out {
+  0% {
+    transform: translateX(0rem);
+  }
+  100% {
+    transform: translateX(3.25rem);
+  }
+}
+.menu-cards__checkbox {
+  animation: checkbox-slide-out 300ms both ease-out;
+}
+.menu-cards__price {
+  animation: price-slide-out 300ms both ease-out;
+}
+:hover > .menu-cards__checkbox {
+  animation: checkbox-slide-in 300ms both ease-out;
+}
+:hover > .menu-cards__price {
+  animation: price-slide-in 300ms both ease-out;
+}
+
 /*-- Font families --*/
 /*-- Font sizes --*/
 /*-- Font weights --*/
@@ -158,6 +203,11 @@
   align-self: center;
   font-size: 0.75rem;
   color: #FFF;
+}
+
+.check-icon {
+  color: white;
+  font-size: 1.5rem;
 }
 
 .heart-icon {
@@ -549,7 +599,7 @@ main .menu-display {
   padding: 0px 13px 40px 13px;
   gap: 40px;
   background-color: #f7f7f7;
-  /*------------ WARNING try to group them with a ghost class-----------------*/
+  /*------------ WARNING : try to group starters dishes and dessert with a ghost class-----------------*/
   /*--------------------------------*/
 }
 @media (min-width: 768px) {
@@ -669,33 +719,66 @@ main .menu-display {
 }
 
 .menu-cards {
-  background-color: #FFF;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: #FFF;
   border-radius: 20px;
-  padding: 14px 15px 14px 15px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  height: 100%;
+  overflow: hidden;
+}
+.menu-cards__txt {
+  width: 98%; /* ... ?? */
+  padding: 14px 0px 14px 15px;
+  height: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu-cards__txt-title {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 21px;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
 }
 .menu-cards__txt-byline {
   font-size: 0.9375rem;
   font-weight: 300;
   line-height: 18px;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
 }
 .menu-cards__price {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
   font-size: 0.9375rem;
   font-weight: 700;
   line-height: 18px;
-  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 27px;
+  height: 67px;
+  padding: 14px 15px 14px 0px;
+  box-sizing: border-box;
+  margin-right: 0px;
+}
+.menu-cards__checkbox {
+  display: flex;
+  box-sizing: border-box;
+  width: 60px;
+  height: 67px;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  transform-origin: right;
+  background-color: #99E2D0;
 }
 
 body {
