@@ -42,31 +42,66 @@
   }
 }
 
-.check-icon{
+.check-icon {
   color: white;
   font-size: 1.5rem;
 }
 
-.heart-icon {
+.heart-container {
   @include flex-center;
+  fill: transparent;
+  stroke: Black;
+  stroke-width: 20;
+  cursor: pointer;
+  position: relative;
+  svg {
+    overflow: visible;
+    width: 1.5rem;
+  }
+
+  path {
+    stroke-dasharray: 1550;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+  }
+
+  .heart-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+}
+
+
+.heart-icon {
+  /* @include flex-center; */
   //override by work-around
   /*  font-size: 1.5rem;
   width:1.5rem;
   height: 1.5rem; */
-/*   &::before {
+  /*   &::before {
      color: $color-secondary;
   } */
+  /*   -webkit-text-stroke: 1px black;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: white;
+  z-index: 0;
+ 
   &:hover {
-    color: red;
-  }
+  } */
 }
 
 /*work-around which does not work in Mozilla etc*/
 .fa-heart {
-  display: inline-block;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 1.5rem;
-  color: white;
-  -webkit-text-stroke: 1px black;
+  /* display: inline-block; */
+  /*  font-family: "Font Awesome 5 Free"; */
+  /*  -webkit-text-stroke: 1px black;
+ font-weight: 900;
+ font-size: 1.5rem;
+ color: white; */
 }
+
+/* background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); */

@@ -96,7 +96,7 @@ $desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
 
 // Menu green checkbox on hover //
 
-@keyframes checkbox-slide-in{
+@keyframes checkbox-slide-in {
   0% {
     transform: translateX(3rem);
   }
@@ -105,7 +105,7 @@ $desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
   }
 }
 
-@keyframes price-slide-in{
+@keyframes price-slide-in {
   0% {
     transform: translateX(3.25rem);
   }
@@ -114,7 +114,7 @@ $desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
   }
 }
 
-@keyframes checkbox-slide-out{
+@keyframes checkbox-slide-out {
   0% {
     transform: translateX(0rem);
   }
@@ -123,7 +123,7 @@ $desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
   }
 }
 
-@keyframes price-slide-out{
+@keyframes price-slide-out {
   0% {
     transform: translateX(0rem);
   }
@@ -132,8 +132,8 @@ $desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
   }
 }
 
-.menu-cards{
-  &__checkbox{
+.menu-cards {
+  &__checkbox {
     animation: checkbox-slide-out 300ms both ease-out;
   }
   &__price {
@@ -145,4 +145,125 @@ $desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
   :hover > &__price {
     animation: price-slide-in 300ms both ease-out;
   }
-} 
+}
+
+/// Heart animations ///
+
+.heart-container {
+  &--shortdelay{
+    animation: heart-div-short-delay 400ms ease-in-out forwards;
+  }
+  &--longdelay{
+    animation: heart-div-long-delay 1500ms ease-in-out forwards;
+  }
+}
+
+
+
+.heart-main path {
+  animation: unscale-animation 500ms ease-in-out forwards;
+}
+
+.heart-background path {
+  animation: unfill-animation 300ms ease-in-out forwards;
+}
+
+.heart-main:hover path {
+  animation: scale-animation 300ms ease-in-out forwards;
+}
+
+.heart-main:hover ~ .heart-background path {
+  animation: fill-animation 300ms ease-in-out forwards;
+}
+
+@keyframes scale-animation {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    opacity: 0.3;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes unscale-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes unfill-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes fill-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes heart-div-long-delay {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  85%{
+    opacity: 1;
+    transform: scale(1.25);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes heart-div-short-delay {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
