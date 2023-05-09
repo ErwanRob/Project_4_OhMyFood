@@ -50,7 +50,7 @@
 .heart-container {
   @include flex-center;
   fill: transparent;
-  stroke: Black;
+  stroke: grey;
   stroke-width: 20;
   cursor: pointer;
   position: relative;
@@ -58,13 +58,11 @@
     overflow: visible;
     width: 1.5rem;
   }
-
   path {
     stroke-dasharray: 1550;
     stroke-dashoffset: 0;
     transform-origin: center;
   }
-
   .heart-background {
     position: absolute;
     left: 0;
