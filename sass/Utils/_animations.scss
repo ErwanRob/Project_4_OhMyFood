@@ -258,7 +258,7 @@ $desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
 
 $loader-duration: 1000ms;
 $loader-delay: 10ms;
-$page-load-duration: 300ms;
+$page-load-duration: 200ms;
 $page-load-delay: $loader-duration + $loader-delay;
 $dot-bar-duration: 0.4s;
 $dot-bar-iteration-count: 3;
@@ -333,7 +333,6 @@ $dot-bar-iteration-count: 3;
     border-radius: 60px;
   }
 }
-
 @keyframes loader-txt-ani {
   0% {
     transform: scale(1);
@@ -357,16 +356,15 @@ $dot-bar-iteration-count: 3;
     opacity: 0;
   }
 }
-
 @keyframes page-load-on-loader-end {
   0% {
     opacity: 0;
    /*  transform: translateY(-2rem); */
-    transform: scale(0.95);
+    transform: scale(0.98);
   }
   1% {
     opacity: 1;
-    transform: scale(0.95);
+    transform: scale(0.98);
    /*  transform: translateY(-2rem); */
   }
   100% {
@@ -375,7 +373,6 @@ $dot-bar-iteration-count: 3;
    /*  transform: translateY(0); */
   }
 }
-
 @keyframes dot-bar1 {
   0% {
     transform: scale(0);

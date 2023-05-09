@@ -228,7 +228,7 @@
   }
 }
 .loaded {
-  animation: page-load-on-loader-end 300ms 1010ms both ease;
+  animation: page-load-on-loader-end 200ms 1010ms both ease;
 }
 
 .loader__logo {
@@ -322,11 +322,11 @@
   0% {
     opacity: 0;
     /*  transform: translateY(-2rem); */
-    transform: scale(0.95);
+    transform: scale(0.98);
   }
   1% {
     opacity: 1;
-    transform: scale(0.95);
+    transform: scale(0.98);
     /*  transform: translateY(-2rem); */
   }
   100% {
