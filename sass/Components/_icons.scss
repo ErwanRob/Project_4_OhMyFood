@@ -45,6 +45,7 @@
 .check-icon {
   color: white;
   font-size: 1.5rem;
+  line-height: 4.5rem;
 }
 
 .heart-container {
@@ -54,6 +55,7 @@
   stroke-width: 20;
   cursor: pointer;
   position: relative;
+  margin-right: 1.5rem;
   svg {
     overflow: visible;
     width: 1.5rem;
@@ -71,35 +73,3 @@
     stroke: none;
   }
 }
-
-
-.heart-icon {
-  /* @include flex-center; */
-  //override by work-around
-  /*  font-size: 1.5rem;
-  width:1.5rem;
-  height: 1.5rem; */
-  /*   &::before {
-     color: $color-secondary;
-  } */
-  /*   -webkit-text-stroke: 1px black;
-  font-weight: 900;
-  font-size: 1.5rem;
-  color: white;
-  z-index: 0;
- 
-  &:hover {
-  } */
-}
-
-/*work-around which does not work in Mozilla etc*/
-.fa-heart {
-  /* display: inline-block; */
-  /*  font-family: "Font Awesome 5 Free"; */
-  /*  -webkit-text-stroke: 1px black;
- font-weight: 900;
- font-size: 1.5rem;
- color: white; */
-}
-
-/* background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); */

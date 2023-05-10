@@ -3,6 +3,8 @@
 /*-- Font weights --*/
 /*-- Cards --*/
 /*-- Button --*/
+/* --------------------- VARIABLES ------------------- */
+/*--------------------------------------------------------*/
 @keyframes menu-slide {
   0% {
     transform: translateX(-5rem);
@@ -74,49 +76,29 @@
   animation: menu-slide 200ms 700ms both ease-out;
 }
 
-@keyframes checkbox-slide-in {
-  0% {
-    transform: translateX(3rem);
-  }
-  100% {
-    transform: translateX(0rem);
-  }
+.menu-cards__title {
+  transition: width 500ms;
 }
-@keyframes price-slide-in {
-  0% {
-    transform: translateX(3.25rem);
-  }
-  100% {
-    transform: translateX(0rem);
-  }
+.menu-cards__byline-txt {
+  transition: width 500ms;
 }
-@keyframes checkbox-slide-out {
-  0% {
-    transform: translateX(0rem);
-  }
-  100% {
-    transform: translateX(3.75rem);
-  }
-}
-@keyframes price-slide-out {
-  0% {
-    transform: translateX(0rem);
-  }
-  100% {
-    transform: translateX(3.25rem);
-  }
+.menu-cards__byline-price {
+  transition: transform 350ms 0.05s;
 }
 .menu-cards__checkbox {
-  animation: checkbox-slide-out 300ms both ease-out;
+  transition: transform 350ms;
 }
-.menu-cards__price {
-  animation: price-slide-out 300ms both ease-out;
+.menu-cards:hover .menu-cards__title {
+  width: calc(100% - 3.75rem);
 }
-:hover > .menu-cards__checkbox {
-  animation: checkbox-slide-in 300ms both ease-out;
+.menu-cards:hover .menu-cards__byline-txt {
+  width: calc(100% - 6.875rem);
 }
-:hover > .menu-cards__price {
-  animation: price-slide-in 300ms both ease-out;
+.menu-cards:hover .menu-cards__byline-price {
+  transform: translateX(-3.75rem);
+}
+.menu-cards:hover .menu-cards__checkbox {
+  transform: translateX(-3.75rem);
 }
 
 .heart-container--shortdelay {
@@ -389,7 +371,7 @@
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   color: black;
-  padding: 1rem;
+  padding: 1.4rem;
 }
 .loader__dot-bar {
   display: inline-block;
@@ -501,6 +483,7 @@
 .check-icon {
   color: white;
   font-size: 1.5rem;
+  line-height: 4.5rem;
 }
 
 .heart-container {
@@ -513,6 +496,7 @@
   stroke-width: 20;
   cursor: pointer;
   position: relative;
+  margin-right: 1.5rem;
 }
 .heart-container svg {
   overflow: visible;
@@ -531,35 +515,6 @@
   stroke: none;
 }
 
-.heart-icon {
-  /* @include flex-center; */
-  /*  font-size: 1.5rem;
-  width:1.5rem;
-  height: 1.5rem; */
-  /*   &::before {
-     color: $color-secondary;
-  } */
-  /*   -webkit-text-stroke: 1px black;
-  font-weight: 900;
-  font-size: 1.5rem;
-  color: white;
-  z-index: 0;
-
-  &:hover {
-  } */
-}
-
-/*work-around which does not work in Mozilla etc*/
-.fa-heart {
-  /* display: inline-block; */
-  /*  font-family: "Font Awesome 5 Free"; */
-  /*  -webkit-text-stroke: 1px black;
-  font-weight: 900;
-  font-size: 1.5rem;
-  color: white; */
-}
-
-/* background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); */
 .footer {
   display: flex;
   flex-direction: column;
@@ -915,6 +870,17 @@ main .menu-display {
   object-fit: cover;
   object-position: 50% 50%;
 }
+@media (min-width: 768px) {
+  .showcase img {
+    object-position: 50% 55%;
+  }
+}
+@media (min-width: 1024px) {
+  .showcase img {
+    height: 383px;
+    object-position: 50% 55%;
+  }
+}
 
 .menu-display {
   display: flex;
@@ -1044,66 +1010,53 @@ main .menu-display {
 }
 
 .menu-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #FFF;
-  border-radius: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  height: 100%;
+  position: relative;
+  border-radius: 20px;
+  background-color: #FFF;
   overflow: hidden;
+  box-sizing: border-box;
+  padding: 14px 15px;
+  cursor: pointer;
 }
-.menu-cards__txt {
-  width: 98%; /* ... ?? */
-  padding: 14px 0px 14px 15px;
-  height: 100%;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.menu-cards__txt-title {
+.menu-cards__title {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 21px;
+  width: 100%;
   text-overflow: ellipsis;
-  display: block;
   overflow: hidden;
   white-space: nowrap;
-  width: 100%;
 }
-.menu-cards__txt-byline {
+.menu-cards__byline {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0.5rem;
+  margin-top: 5px;
+}
+.menu-cards__byline-txt {
   font-size: 0.9375rem;
   font-weight: 300;
   line-height: 18px;
   text-overflow: ellipsis;
-  display: block;
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
 }
-.menu-cards__price {
+.menu-cards__byline-price {
   font-size: 0.9375rem;
   font-weight: 700;
   line-height: 18px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 27px;
-  height: 67px;
-  padding: 14px 15px 14px 0px;
-  box-sizing: border-box;
-  margin-right: 0px;
+  padding-left: 3px;
 }
 .menu-cards__checkbox {
-  display: flex;
-  box-sizing: border-box;
+  position: absolute;
+  background: #99e2d0;
+  right: -60px;
+  top: 0;
   width: 60px;
-  height: 67px;
-  align-self: center;
-  justify-content: center;
-  align-items: center;
-  transform-origin: right;
-  background-color: #99E2D0;
+  height: 100%;
+  text-align: center;
 }
 
 body {

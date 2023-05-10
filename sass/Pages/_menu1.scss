@@ -18,6 +18,13 @@ main {
     height: 275px;
     object-fit: cover;
     object-position: 50% 50%;
+    @media (min-width: 768px) {
+      object-position: 50% 55%;
+    }
+    @media (min-width: 1024px) {
+      height: 383px;
+      object-position: 50% 55%;
+    }
   }
 }
 
@@ -134,60 +141,45 @@ main {
 }
 
 .menu-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: $color-quinary;
-  border-radius: 20px;
   @include heading-shadow;
-  height: 100%;
+  position: relative;
+  border-radius: 20px;
+  background-color: $color-quinary;
   overflow: hidden;
-  &__txt {
-
-    width: 98%; /* ... ?? */
-
-    padding: 14px 0px 14px 15px;
-    height: 100%;
+  box-sizing: border-box;
+  padding: 14px 15px;
+  cursor: pointer;
+  &__title {
+    @include menu-card-title-style;
+    width: 100%;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    &-title {
-      @include menu-card-title-style;
-      text-overflow: ellipsis;
-      display: block;
-      overflow: hidden;
-      white-space: nowrap;
-      width: 100%;
-    }
-    &-byline {
+  }
+  &__byline {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0.5rem;
+    margin-top: 5px;
+    > &-txt {
       @include menu-card-byline-style;
       text-overflow: ellipsis;
-      display: block;
       overflow: hidden;
       white-space: nowrap;
       width: 100%;
     }
-  }
-  &__price {
-    @include menu-card-price-style;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 27px;
-    height: 67px;
-    padding: 14px 15px 14px 0px;
-    box-sizing: border-box;
-    margin-right: 0px;
+    &-price {
+      @include menu-card-price-style;
+      padding-left: 3px;
+    }
   }
   &__checkbox {
-    display: flex;
-    box-sizing: border-box;
+    position: absolute;
+    background: #99e2d0;
+    right: -60px;
+    top: 0;
     width: 60px;
-    height: 67px;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
-    transform-origin: right;
-    background-color: $color-tertiary;
+    height: 100%;
+    text-align: center;
   }
 }

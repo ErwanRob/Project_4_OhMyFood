@@ -1,3 +1,17 @@
+/* --------------------- VARIABLES ------------------- */
+
+// Menu green checkbox on hover //
+$transition-width-duration:500ms;
+$transition-slide-duration:350ms;
+
+// HomePage LOADER //
+$loader-duration: 1000ms;
+$loader-delay: 10ms;
+$page-load-duration: 200ms;
+$page-load-delay: $loader-duration + $loader-delay;
+$dot-bar-duration: 0.4s;
+$dot-bar-iteration-count: 3;
+
 // Menu slide on load //
 $anim-gap: 50ms;
 $title-slide-dur: 250ms;
@@ -15,7 +29,11 @@ $dishes-card-delay3: $dishes-card-delay2 + $anim-gap;
 $desserts-card-delay: $dishes-card-delay3;
 $desserts-card-delay2: $desserts-card-delay + $anim-gap;
 $desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
+/*--------------------------------------------------------*/
 
+
+
+// Menu slide on load //
 @keyframes menu-slide {
   0% {
     transform: translateX(-5rem);
@@ -95,57 +113,38 @@ $desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
 }
 
 // Menu green checkbox on hover //
-
-@keyframes checkbox-slide-in {
-  0% {
-    transform: translateX(3rem);
-  }
-  100% {
-    transform: translateX(0rem);
-  }
-}
-@keyframes price-slide-in {
-  0% {
-    transform: translateX(3.25rem);
-  }
-  100% {
-    transform: translateX(0rem);
-  }
-}
-@keyframes checkbox-slide-out {
-  0% {
-    transform: translateX(0rem);
-  }
-  100% {
-    transform: translateX(3.75rem);
-  }
-}
-@keyframes price-slide-out {
-  0% {
-    transform: translateX(0rem);
-  }
-  100% {
-    transform: translateX(3.25rem);
-  }
-}
-
 .menu-cards {
+  &__title {
+    transition: width $transition-width-duration;
+  }
+  &__byline {
+    > &-txt {
+      transition: width $transition-width-duration;
+    }
+    &-price {
+      transition: transform $transition-slide-duration 0.05s;
+    }
+  }
   &__checkbox {
-    animation: checkbox-slide-out 300ms both ease-out;
+    transition: transform $transition-slide-duration;
   }
-  &__price {
-    animation: price-slide-out 300ms both ease-out;
-  }
-  :hover > &__checkbox {
-    animation: checkbox-slide-in 300ms both ease-out;
-  }
-  :hover > &__price {
-    animation: price-slide-in 300ms both ease-out;
+  &:hover {
+    .menu-cards__title {
+      width: calc(100% - 3.75rem);
+    }
+    .menu-cards__byline-txt {
+      width: calc(100% - 6.875rem);
+    }
+    .menu-cards__byline-price {
+      transform: translateX(-3.75rem);
+    }
+    .menu-cards__checkbox {
+      transform: translateX(-3.75rem);
+    }
   }
 }
 
 // Heart animations //
-
 .heart-container {
   &--shortdelay {
     animation: heart-div-short-delay 400ms ease-in-out forwards;
@@ -154,7 +153,6 @@ $desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
     animation: heart-div-long-delay 1000ms ease-in-out forwards;
   }
 }
-
 .heart-main path {
   animation: unscale-animation 500ms ease-in-out forwards;
 }
@@ -255,16 +253,9 @@ $desserts-card-delay3: $desserts-card-delay2 + $anim-gap;
 }
 
 // Home LOADER //
-
-$loader-duration: 1000ms;
-$loader-delay: 10ms;
-$page-load-duration: 200ms;
-$page-load-delay: $loader-duration + $loader-delay;
-$dot-bar-duration: 0.4s;
-$dot-bar-iteration-count: 3;
-
 .loaded {
-  animation: page-load-on-loader-end $page-load-duration $page-load-delay both ease;
+  animation: page-load-on-loader-end $page-load-duration $page-load-delay both
+    ease;
 }
 
 .loader {
@@ -326,7 +317,7 @@ $dot-bar-iteration-count: 3;
   90% {
     transform: scale(1.25);
   }
-  99%{
+  99% {
     transform: scale(2);
   }
   100% {
@@ -362,18 +353,18 @@ $dot-bar-iteration-count: 3;
 @keyframes page-load-on-loader-end {
   0% {
     opacity: 0;
-   /*  transform: translateY(-2rem); */
+    /*  transform: translateY(-2rem); */
     transform: scale(0.98);
   }
   1% {
     opacity: 1;
     transform: scale(0.98);
-   /*  transform: translateY(-2rem); */
+    /*  transform: translateY(-2rem); */
   }
   100% {
     opacity: 1;
     transform: scale(1);
-   /*  transform: translateY(0); */
+    /*  transform: translateY(0); */
   }
 }
 @keyframes dot-bar1 {

@@ -88,11 +88,11 @@ Tiramisu
 La note enchantée
 
 Entrées
-Ravioles de foie gras 
+Ravioles de foie gras
 Accompagnées de leur crème à la truffe
 25€
 
-Caviar osciètre 
+Caviar osciètre
 Sur blini à la farine de blé noir
 35€
 
@@ -214,7 +214,66 @@ body{
 }
 
 
+/*
+.menu-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $color-quinary;
+  border-radius: 20px;
+  @include heading-shadow;
+  height: 100%;
+  overflow: hidden;
+  &__txt {
 
+    width: 98%;
+
+    padding: 14px 0px 14px 15px;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    &-title {
+      @include menu-card-title-style;
+      text-overflow: ellipsis;
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+    &-byline {
+      @include menu-card-byline-style;
+      text-overflow: ellipsis;
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+  }
+  &__price {
+    @include menu-card-price-style;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 27px;
+    height: 67px;
+    padding: 14px 15px 14px 0px;
+    box-sizing: border-box;
+    margin-right: 0px;
+  }
+  &__checkbox {
+    display: flex;
+    box-sizing: border-box;
+    width: 60px;
+    height: 67px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    transform-origin: right;
+    background-color: $color-tertiary;
+  }
+}
+ */
 
 
 
