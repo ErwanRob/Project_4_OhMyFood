@@ -326,8 +326,11 @@ $dot-bar-iteration-count: 3;
   90% {
     transform: scale(1.25);
   }
-  100% {
+  99%{
     transform: scale(2);
+  }
+  100% {
+    transform: scale(0);
     opacity: 0;
     border-color: $color-secondary;
     border-radius: 60px;

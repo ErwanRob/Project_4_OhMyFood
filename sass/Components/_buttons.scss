@@ -1,13 +1,12 @@
 .base-button {
-  padding: 0.813rem 1.188rem;
+  @include button-style;
+  display:flex;
+  @include flex-center;
   color: $color-quinary;
   width: 11.563rem;
   height: 3.125rem;
-  a {
-    @include button-style;
-    text-decoration: none;
-    color:$color-quinary;
-  }
+  text-decoration: none;
+  color: $color-quinary;
   &--large {
     width: 13.75rem;
   }

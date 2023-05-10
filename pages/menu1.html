@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <title>ohmyfoodmenupage</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,15 +17,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- For SVG -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700"
-    />
-
     <link rel="stylesheet" href="../public/css/style.css" />
   </head>
-
   <body>
     <header class="header-menu">
       <div class="header-menu__back">
@@ -40,18 +34,20 @@
       <div class="showcase">
         <img
           src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+          alt="image d'un restaurant"
         />
       </div>
       <div class="menu-display">
-        <!-- ----------------------------- Title --------------------------- -->
+        <!-- Title -->
         <div class="menu-display__title">
           <h2 class="menu-display__title-txt">La palette du goût</h2>
-          <div class="menu-display__title-heart heart-container heart-container--longdelay">
+          <div
+            class="menu-display__title-heart heart-container heart-container--longdelay"
+          >
             <svg
               class="heart-main"
               viewBox="0 0 512 512"
               width="100"
-              title="heart"
             >
               <path
                 d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
@@ -61,7 +57,6 @@
               class="heart-background"
               viewBox="0 0 512 512"
               width="100"
-              title="heart"
             >
               <linearGradient
                 id="gradient"
@@ -70,7 +65,7 @@
                 x2="36.12%"
                 y2="108.56%"
               >
-                <stop stop-color="#9356DC" />
+                <stop offset="0" stop-color="#9356DC" />
                 <stop offset="1.239" stop-color="#FF79DA" />
               </linearGradient>
               <path
@@ -80,17 +75,7 @@
             </svg>
           </div>
         </div>
-
-        <!--  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-         <stop offset="0%" stop-color="#9356DC" />
-         <stop offset="100%" stop-color="#FF79DA" />
-       </linearGradient> -->
-        <!--   
-           <i class="fa-regular fa-heart heart-icon">
-            <i class="fa-regular fa-heart heart-icon">  
-           </i></i>
-            -->
-        <!-- ----------------------------- Starters --------------------------- -->
+        <!-- Starters -->
         <div class="menu-display__starters">
           <div class="menu-display__starters-title starters-title-slide">
             <h3 class="menu-display__starters-title-txt">Entrées</h3>
@@ -134,7 +119,7 @@
             </article>
           </div>
         </div>
-        <!-- ----------------------------- Dish --------------------------- -->
+        <!-- Dish -->
         <div class="menu-display__dishes">
           <div class="menu-display__dishes-title dishes-title-slide">
             <h3 class="menu-display__dishes-title-txt">Plats</h3>
@@ -178,7 +163,7 @@
             </article>
           </div>
         </div>
-        <!-- ----------------------------- Desserts --------------------------- -->
+        <!-- Desserts -->
         <div class="menu-display__desserts">
           <div class="menu-display__desserts-title desserts-title-slide">
             <h3 class="menu-display__desserts-title-txt">Desserts</h3>
@@ -222,15 +207,17 @@
             </article>
           </div>
         </div>
-        <!-- ----------------------------- Orders --------------------------- -->
+        <!-- Orders -->
         <div class="menu-display__order">
-          <button class="menu-display__order-button base-button grad-rounded">
-            <a href="#">Commander</a>
-          </button>
+          <a
+            href="#"
+            class="menu-display__order-button base-button grad-rounded"
+            >Commander</a
+          >
         </div>
       </div>
     </main>
-    <!------------------------------- footer --------------------------- -->
+    <!-- footer -->
     <footer class="footer">
       <div class="footer__logo">
         <h4 class="footer__logo-title">ohmyfood</h4>
