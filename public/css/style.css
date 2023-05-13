@@ -890,7 +890,7 @@ main .menu-display {
   padding: 0px 13px 40px 13px;
   gap: 40px;
   background-color: #f7f7f7;
-  /*------------ WARNING : try to group starters dishes and dessert with a ghost class-----------------*/
+  /*------------ Personal WARNING : try to group starters dishes and dessert with a ghost class-----------------*/
   /*--------------------------------*/
 }
 @media (min-width: 768px) {
